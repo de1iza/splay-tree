@@ -30,17 +30,17 @@ class SplayTree:
             self.root = Node(key)
 
     # left rotate helper
-    def __rotate_left(self, v: Node) -> Node:
-        tmp_node: Node = v.right
-        v.right = tmp_node.left
-        tmp_node.left = v
+    def __rotate_left(self, node: Node) -> Node:
+        tmp_node: Node = node.right
+        node.right = tmp_node.left
+        tmp_node.left = node
         return tmp_node
 
     # right rotate helper
-    def __rotate_right(self, v: Node) -> Node:
-        tmp_node: Node = v.left
-        v.left = tmp_node.right
-        tmp_node.right = v
+    def __rotate_right(self, node: Node) -> Node:
+        tmp_node: Node = node.left
+        node.left = tmp_node.right
+        tmp_node.right = node
         return tmp_node
 
     # splay helper function
